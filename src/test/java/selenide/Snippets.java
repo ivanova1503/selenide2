@@ -1,10 +1,10 @@
 package selenide;
 
 import com.codeborne.selenide.*;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Keys;
 
 import java.io.*;
-import java.time.*;
+import java.time.Duration;
 
 import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Condition.empty;
@@ -117,7 +117,6 @@ public class Snippets {
 
     //longer timeouts
     $("").shouldBe(visible, Duration.ofSeconds(30));
-    $("").waitUntil(visible, 30000);
 
 
   }
@@ -205,6 +204,7 @@ public class Snippets {
     executeJavaScript("alert('selenide')");
     executeJavaScript("alert(arguments[0]+arguments[1])", "abc", 12);
     long fortytwo = executeJavaScript("return arguments[0]*arguments[1];", 6, 7);
+
 
   }
 }
